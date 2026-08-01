@@ -13,7 +13,7 @@
     <div class="toprow">
       <div class="brand">
         <h1>Tajuplné říše</h1>
-        <small>Neoficiální počítadlo bodů – základní hra + Šašek</small>
+        <small>Neoficiální počítadlo bodů – základní hra</small>
       </div>
       <div class="scorebox" aria-live="polite">
         <div class="count"><span id="count">0</span>/<span id="limit">7</span> karet</div>
@@ -59,9 +59,8 @@
     <summary>Jak aplikace počítá zvláštní karty</summary>
     <p>U <strong>Přeludu, Měňavce, Dvojníka, Knihy proměn a Ostrova</strong> se po přidání objeví tlačítko „Nastavit“. Schopnost je dobrovolná, takže karta může zůstat i nenastavená.</p>
     <p>Nejdřív se vyhodnotí kopírování, potom Kniha proměn, odstranění postihů, vymazání karet a nakonec body. Nekromant dovolí osmou kartu, pokud je to Armáda, Vůdce, Čaroděj nebo Tvor.</p>
-    <p><strong>Šašek:</strong> přidává +3 za každou další nevymazanou kartu s lichou základní silou, nebo +50, jsou-li liché všechny karty v ruce.</p>
-    <p><strong>Rozpoznání z fotografie:</strong> aplikace rozdělí snímek na menší překrývající se části a hledá velké světlé názvy na tmavých horních pruzích karet. Karty mohou být mírně natočené, ale neměly by se překrývat.</p>
-    <p>Samotná fotografie neopouští zařízení. Pro načtení OCR knihovny a českého jazykového modelu je při prvním rozpoznání potřeba internet. Detailní rozpoznání může na telefonu chvíli trvat.</p>
+    <p><strong>Rozpoznání z fotografie:</strong> karty mohou být otočené i o 90°, 180° nebo 270°. Aplikace čte názvy a při nečitelném názvu porovnává také jedinečný text schopnosti. Před vložením vždy nabídne kontrolu a ruční opravu.</p>
+    <p>Samotná fotografie neopouští zařízení. Pro načtení OCR knihovny a českého jazykového modelu je při prvním rozpoznání potřeba internet.</p>
     <p>Aplikace neobsahuje obrázky karet ani rozšíření Prokletý poklad. Při nejasnosti má přednost text na fyzické kartě a oficiální pravidla.</p>
   </details>
 </div>
@@ -115,6 +114,9 @@
 <script src="ui.js"></script>
 <script src="camera.js"></script>
 <script src="camera-v2.js"></script>
+<script src="camera-v3a.js?v=3.1"></script>
+<script src="camera-v3b.js?v=3.1"></script>
+<script src="camera-v3c.js?v=3.1"></script>
 <script src="actions.js"></script>
 </body>
 </html>
