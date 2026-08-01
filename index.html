@@ -59,7 +59,8 @@
     <summary>Jak aplikace počítá zvláštní karty</summary>
     <p>U <strong>Přeludu, Měňavce, Dvojníka, Knihy proměn a Ostrova</strong> se po přidání objeví tlačítko „Nastavit“. Schopnost je dobrovolná, takže karta může zůstat i nenastavená.</p>
     <p>Nejdřív se vyhodnotí kopírování, potom Kniha proměn, odstranění postihů, vymazání karet a nakonec body. Nekromant dovolí osmou kartu, pokud je to Armáda, Vůdce, Čaroděj nebo Tvor.</p>
-    <p><strong>Rozpoznání z fotografie:</strong> karty mohou být otočené i o 90°, 180° nebo 270°. Aplikace čte názvy a při nečitelném názvu porovnává také jedinečný text schopnosti. Před vložením vždy nabídne kontrolu a ruční opravu.</p>
+    <p><strong>Rozpoznání z fotografie:</strong> aplikace čte snímek ve čtyřech orientacích. Kromě názvu a textu schopnosti kontroluje také barvu levého pruhu a základní sílu v horním kroužku. Kartu automaticky přijme jen při shodě více nezávislých znaků.</p>
+    <p>Při slabé nebo rozporné shodě zobrazí „neurčeno“ a nabídne možnosti zúžené podle zjištěné barvy a síly. Raději tedy kartu nevybere, než aby doplnila chybnou.</p>
     <p>Samotná fotografie neopouští zařízení. Pro načtení OCR knihovny a českého jazykového modelu je při prvním rozpoznání potřeba internet.</p>
     <p>Aplikace neobsahuje obrázky karet ani rozšíření Prokletý poklad. Při nejasnosti má přednost text na fyzické kartě a oficiální pravidla.</p>
   </details>
@@ -117,6 +118,9 @@
 <script src="camera-v3a.js?v=3.1"></script>
 <script src="camera-v3b.js?v=3.1"></script>
 <script src="camera-v3c.js?v=3.1"></script>
+<script src="camera-v4a.js?v=4.0"></script>
+<script src="camera-v4b.js?v=4.0"></script>
+<script src="camera-v4c.js?v=4.0"></script>
 <script src="actions.js"></script>
 </body>
 </html>
