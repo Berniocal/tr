@@ -83,21 +83,6 @@ function toast(msg){
   clearTimeout(toastTimer);toastTimer=setTimeout(()=>e.classList.remove("show"),2300);
 }
 
-document.getElementById("cameraBtn").addEventListener("click",()=>document.getElementById("cameraInput").click());
-document.getElementById("cameraInput").addEventListener("change",e=>openScan(e.target.files?.[0]));
-document.getElementById("scanClose").addEventListener("click",closeScan);
-document.getElementById("scanCancel").addEventListener("click",closeScan);
-document.getElementById("scanAgain").addEventListener("click",recognizeScan);
-document.getElementById("scanAddRow").addEventListener("click",()=>{scanCandidates.push({id:"",score:0,line:"",manual:true});renderScanCandidates();});
-document.getElementById("scanAppend").addEventListener("click",()=>applyScannedCards(false));
-document.getElementById("scanReplace").addEventListener("click",()=>applyScannedCards(true));
-document.getElementById("scanBack").addEventListener("click",e=>{if(e.target.id==="scanBack"&&!scanBusy)closeScan();});
-document.getElementById("scanResults").addEventListener("click",e=>{
-  const b=e.target.closest("[data-scan-remove]");
-  if(!b)return;
-  scanCandidates.splice(Number(b.dataset.scanRemove),1);renderScanCandidates();
-});
-
 document.getElementById("library").addEventListener("click",e=>{
   const b=e.target.closest("[data-id]");if(b)toggleCard(b.dataset.id);
 });
@@ -130,9 +115,7 @@ document.getElementById("modalBody").addEventListener("click",e=>{
   const c=e.target.closest("[data-choice]");if(c){draft.target=c.dataset.choice;highlightChoice();}
 });
 document.addEventListener("keydown",e=>{
-  if(e.key!=="Escape")return;
-  if(document.getElementById("scanBack").classList.contains("show")){if(!scanBusy)closeScan();return;}
-  closeModal();
+  if(e.key==="Escape")closeModal();
 });
 
 loadState();
